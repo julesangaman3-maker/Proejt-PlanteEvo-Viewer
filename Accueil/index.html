@@ -4,100 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantEvo Viewer - Des algues à la fleur</title>
     <link rel="stylesheet" href="style.css">
-    <title>Brief projet, PlanteEVO View</title>
 </head>
 
-<body>
+<body class="page-accueil">
+    <div class="fond" id="haut">
 
-    <header>
-        <div class="logo">
-            <img src="Logo PlantEvo Viewer _ agriculture connectée.png"
-                 alt="Explorer-Comprendre-Cultiver" height="100" width="100">
-        </div>
+        <header class="barre">
+            <a class="logo" href="index.html">
+                <img src="Logo PlantEvo Viewer _ agriculture connectée.png"
+                     alt="PlantEvo Viewer - Explorer, Comprendre, Cultiver" height="70" width="70">
+            </a>
 
-        <nav>
-            <div class="entete">
+            <nav class="navAccueil">
                 <a href="Menu.html">Menu</a>
                 <a href="contact.html">Contact</a>
                 <a href="propos.html">À propos</a>
                 <a href="plante.html">Plante</a>
-                <a href="Evolution.html">Evolution</a>
-            </div>
-        </nav>
-        <label for="Menu"></label>
-        <select name="Menu" id="Menu">
-            <option value="alg">Choisir un Menu</option>
-            <option value="alg">Les Algues</option>
-            <option value="mousse">Les Mousses</option>
-            <option value="foug">Les Fougères</option>
-            <option value="conif">Les Conifère</option>
-            <option value="grani">Les Graminées</option>
-            <option value="DIco">Les Dicotylédones</option>
-            +
-        </select>
-    </header>
+                <a href="Evolution.html">Évolution</a>
+            </nav>
 
-    <div class="titre">
-        <h1>PlanteEVO Viewer</h1>
-    </div>
+            <label class="choix">
+                <span class="cache">Aller directement à une plante</span>
+                <select onchange="if (this.value) window.location.href = this.value">
+                    <option value="">Choisir une plante</option>
+                    <option value="Algues.html">Les Algues</option>
+                    <option value="Mousses.html">Les Mousses</option>
+                    <option value="Fougères.html">Les Fougères</option>
+                    <option value="Comifère.html">Les Conifères</option>
+                    <option value="Graminees.html">Les Graminées</option>
+                    <option value="Dicotylédones.html">Les Dicotylédones</option>
+                </select>
+            </label>
+        </header>
 
-    <div class="corps">
-        <div class="message">
-            <h2>Voyez vos plantes grandir, des algues à la fleur.</h2>
-            <h3>
-                <i>Sans les plantes, pas de vie sur Terre. Découvrez comment elles ont conquis la planète. »<br>
-                Près de 500 millions d’années d’évolution, des premières algues aux fleurs.</i>
-            </h3>
-        </div>
+        <main>
+            <section class="hero">
+                <h1>PlantEvo Viewer</h1>
+                <h2>Voyez vos plantes grandir, des algues à la fleur.</h2>
+                <p>
+                    Sans les plantes, pas de vie sur Terre. Embarquez pour un voyage de près de
+                    500 millions d'années et découvrez comment elles ont conquis la planète,
+                    des premières algues jusqu'aux fleurs.
+                </p>
+                <a class="btn grosBtn" href="Menu.html">Commencer l'exploration &rarr;</a>
+            </section>
 
-        <div class="ensemble">
-            <div class="recherche">
-                <a href="plante.html">
-                    <img src="rechercher.png" alt="recherche" height="100" width="100">
-                </a>
-                <div class="recher">
-                    <p>Explorez Parcourez les espèces et repérez celles qui vous intéressent.</p>
-                </div>
-            </div>
+            <h2 class="titreSection">Un voyage en trois temps</h2>
+            <section class="faits ensemble">
+                <article class="fiche">
+                    <a href="plante.html">
+                        <img src="rechercher.png" alt="Explorer" height="100" width="100">
+                    </a>
+                    <h3>Explorez</h3>
+                    <p>Parcourez les espèces et repérez celles qui vous intéressent.</p>
+                </article>
 
-            <div class="Evolution">
-                <a href="Evolution.html">
-                    <img src="diagramme.png" alt="Evolution" height="100" width="100">
-                </a>
-                <div class="Evolu">
-                    <p>Comprenez Suivez la croissance, de la germination à la floraison.</p>
-                </div>
-            </div>
+                <article class="fiche">
+                    <a href="Evolution.html">
+                        <img src="diagramme.png" alt="Comprendre" height="100" width="100">
+                    </a>
+                    <h3>Comprenez</h3>
+                    <p>Suivez la croissance, de la germination à la floraison.</p>
+                </article>
 
-            <div class="plantes">
-                <a href="plante.html">
-                    <img src="fleur.png" alt="plante" height="100" width="100">
-                </a>
-                <div class="plante">
-                    <p>Cultivez, Appliquez les bons gestes à chaque étape de la vie de la plante.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+                <article class="fiche">
+                    <a href="plante.html">
+                        <img src="fleur.png" alt="Cultiver" height="100" width="100">
+                    </a>
+                    <h3>Cultivez</h3>
+                    <p>Appliquez les bons gestes à chaque étape de la vie de la plante.</p>
+                </article>
+            </section>
 
-    <section class="pieds">
-        <footer>
-            <div class="explorer">
+            <section class="cta">
                 <a href="Menu.html">
-                    <img src="bouton-jouer.png" alt="explorer" height="50" width="50">
+                    <img src="bouton-jouer.png" alt="Commencer l'exploration" height="60" width="60">
                 </a>
-                <div class="com">
-                    <h3>Commencer l’exploration</h3>
+                <div>
+                    <h3>Commencer l'exploration</h3>
+                    <p>Gratuit pour découvrir les premières plantes.</p>
                 </div>
-            </div>
+            </section>
+        </main>
 
-            <div class="Gratuit">
-                <h3>Gratuit pour découvrir les premières plantes.</h3>
+        <footer class="pied">
+            <strong>PlantEvo Viewer</strong>
+            <p>Explorer, comprendre, cultiver : l'histoire des plantes, une étape à la fois.</p>
+            <div class="liens">
+                <a href="Menu.html">Menu</a>
+                <a href="propos.html">À propos</a>
+                <a href="contact.html">Contact</a>
+                <a href="#haut">&uarr; Haut de page</a>
             </div>
+            <p>&copy; 2026 PlantEvo Viewer</p>
         </footer>
-    </section>
 
-</body>
-
-</html>
+    </div>

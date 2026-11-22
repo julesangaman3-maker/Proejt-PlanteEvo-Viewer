@@ -5,26 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les Algues</title>
-    <link rel="stylesheet" href="Algues.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div class="fond">
+<body class="page-plante page-algues">
+    <div class="fond" id="haut">
         <header>
-            <a class="retourMenu" href="Menu.html"> &larr; Retour au Menu</a>
+            <a class="btn retour" href="Menu.html">&larr; Retour au Menu</a>
 
             <h1>LES ALGUES</h1>
-            <p class="sousTitre">Bienvenue sur ma page consacrée aux algues.</p>
+            <p class="sousTitre">Là où tout a commencé : les pionnières des océans.</p>
+            <span class="chiffre">Plus de 500 millions d'années d'histoire</span>
         </header>
 
         <main>
             <p class="intro">
-                Les premières étapes de la vie d’une plante.
-                Il y a +500 millions d’années apparaissaient les algues, qui représentent
-                le début de l’évolution des plantes.
+                Avant les forêts, avant les fleurs, il y avait l'eau et les algues. Ce sont elles qui
+                ont ouvert le grand chapitre de la vie végétale. Simples, souples et sans racines,
+                elles ont préparé le terrain pour toutes les plantes qui allaient conquérir les continents.
             </p>
+            <h2 class="titreSection">Le saviez-vous ?</h2>
+            <section class="faits">
+                <article class="fiche">
+                    <h3>Merci pour l'oxygène</h3>
+                    <p>Les algues et le phytoplancton produisent une part considérable de l'oxygène que nous
+                        respirons : environ la moitié selon les estimations.</p>
+                </article>
 
-            <section class="imagesAlgues">
+                <article class="fiche">
+                    <h3>Ni racines, ni tiges</h3>
+                    <p>Une algue absorbe l'eau et les minéraux par toute sa surface. Portée par l'eau,
+                        elle n'a pas besoin de tiges pour se tenir.</p>
+                </article>
+
+                <article class="fiche">
+                    <h3>Des forêts sous la mer</h3>
+                    <p>Les laminaires géantes forment de vraies forêts sous-marines, et certaines poussent
+                        de plusieurs dizaines de centimètres par jour.</p>
+                </article>
+            </section>
+
+            <h2 class="titreSection">En images</h2>
+            <section class="grille grille-2">
                 <figure>
                     <img src="../Algues/WhatsApp Image 2026-11-21 at 21.31.13 (1).jpeg" alt="Algues 1">
                 </figure>
@@ -34,6 +56,23 @@
                 </figure>
             </section>
         </main>
+
+        <nav class="navPages">
+            <span class="btn desactive" aria-disabled="true">&larr; Précédent</span>
+            <a class="btn" href="Menu.html">Menu</a>
+            <a class="btn" href="Mousses.html">Suivant &rarr;</a>
+        </nav>
+
+        <footer class="pied">
+            <strong>PlantEvo Viewer</strong>
+            <p>Étape 1 sur 6 : les algues, premières plantes de l'histoire.</p>
+            <div class="liens">
+                <a href="index.html">Accueil</a>
+                <a href="Menu.html">Menu</a>
+                <a href="#haut">&uarr; Haut de page</a>
+            </div>
+            <p>&copy; 2026 PlantEvo Viewer</p>
+        </footer>
     </div>
 </body>
 

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Dicotylédones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-plante page-dicotyledones">
+    <div class="fond" id="haut">
+        <header>
+            <a class="btn retour" href="Menu.html">&larr; Retour au Menu</a>
+
+            <h1>LES DICOTYLÉDONES</h1>
+            <p class="sousTitre">L'explosion des fleurs, des couleurs et des fruits.</p>
+            <span class="chiffre">Plus de 130 millions d'années</span>
+        </header>
+
+        <main>
+            <p class="intro">
+                Avec les plantes à fleurs, la Terre s'est mise en couleurs. Au Crétacé, les angiospermes
+                se sont diversifiées autour de lignées proches des dicotylédones, avant que les
+                monocotylédones, puis les graminées, n'émergent. Fleurs, nectar, fruits : tout est fait
+                pour séduire insectes et animaux.
+            </p>
+
+            <h2 class="titreSection">Le saviez-vous ?</h2>
+            <section class="faits">
+                <article class="fiche">
+                    <h3>Deux premières feuilles</h3>
+                    <p>Leur nom vient de la graine, qui contient deux cotylédons. On les reconnaît aussi
+                        à leurs feuilles aux nervures ramifiées, comme un réseau.</p>
+                </article>
+
+                <article class="fiche">
+                    <h3>Une alliance avec les insectes</h3>
+                    <p>Couleurs, parfums et nectar attirent les pollinisateurs. En échange, les insectes
+                        transportent le pollen : plantes et insectes ont évolué ensemble.</p>
+                </article>
+
+                <article class="fiche">
+                    <h3>Une immense famille</h3>
+                    <p>Rosier, haricot, chêne, tournesol, tomate... Les botanistes les regroupent
+                        aujourd'hui surtout sous le nom d'eudicotylédones.</p>
+                </article>
+            </section>
+
+            <h2 class="titreSection">En images</h2>
+            <section class="grille grille-auto">
+                <figure><img src="../Dicotyledones/1.jpeg" alt="Dicotylédone 1"></figure>
+                <figure><img src="../Dicotyledones/2.jpeg" alt="Dicotylédone 2"></figure>
+                <figure><img src="../Dicotyledones/3.jpeg" alt="Dicotylédone 3"></figure>
+                <figure><img src="../Dicotyledones/4.jpeg" alt="Dicotylédone 4"></figure>
+                <figure><img src="../Dicotyledones/5.jpeg" alt="Dicotylédone 5"></figure>
+                <figure><img src="../Dicotyledones/6.jpeg" alt="Dicotylédone 6"></figure>
+                <figure><img src="../Dicotyledones/7.jpeg" alt="Dicotylédone 7"></figure>
+                <figure><img src="../Dicotyledones/10.jpeg" alt="Dicotylédone 8"></figure>
+                <figure><img src="../Dicotyledones/11.jpeg" alt="Dicotylédone 9"></figure>
+                <figure><img src="../Dicotyledones/8.jpeg" alt="Dicotylédone 10"></figure>
+            </section>
+        </main>
+
+        <nav class="navPages">
+            <a class="btn" href="Graminees.html">&larr; Précédent</a>
+            <a class="btn" href="Menu.html">Menu</a>
+            <span class="btn desactive" aria-disabled="true">Suivant &rarr;</span>
+        </nav>
+
+        <footer class="pied">
+            <strong>PlantEvo Viewer</strong>
+            <p>Étape 6 sur 6 : les dicotylédones, l'explosion des fleurs. Fin du voyage !</p>
+            <div class="liens">
+                <a href="index.html">Accueil</a>
+                <a href="Menu.html">Menu</a>
+                <a href="#haut">&uarr; Haut de page</a>
+            </div>
+            <p>&copy; 2026 PlantEvo Viewer</p>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -5,27 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les Conifères</title>
-    <link rel="stylesheet" href="Comifères.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div class="fondConiferes">
+<body class="page-plante page-coniferes">
+    <div class="fond" id="haut">
         <header>
-            <a class="retourMenu" href="Menu.html">&larr; Retour au Menu</a>
+            <a class="btn retour" href="Menu.html">&larr; Retour au Menu</a>
 
             <h1>LES CONIFÈRES</h1>
-            <p class="sousTitre">Bienvenue sur ma page consacrée aux conifères.</p>
+            <p class="sousTitre">Les arbres qui ont inventé la graine.</p>
+            <span class="chiffre">Environ 300 millions d'années</span>
         </header>
 
         <main>
             <p class="intro">
-                Le passage évolutif entre l'apparition des premières fougères et celle des premiers
-                conifères a duré environ 60 à 90 millions d'années. Les fougères ont émergé il y a
-                390 à 360 millions d'années (au Dévonien), tandis que les conifères sont apparus
-                il y a environ 300 millions d'années (à la fin du Carbonifère).
+                Après les fougères, les plantes ont fait un pas décisif : la graine. Les conifères sont
+                apparus à la fin du Carbonifère, il y a environ 300 millions d'années, soit 60 à 90 millions
+                d'années après les premières fougères. Armés de graines et d'aiguilles, ils ont pu
+                s'installer loin de l'eau, jusque dans les montagnes et les régions froides.
             </p>
 
-            <section class="imagesConiferes">
+            <h2 class="titreSection">Le saviez-vous ?</h2>
+            <section class="faits">
+                <article class="fiche">
+                    <h3>La graine change tout</h3>
+                    <p>Une graine protège l'embryon de la future plante. Le pollen voyage avec le vent :
+                        plus besoin d'eau pour se reproduire.</p>
+                </article>
+
+                <article class="fiche">
+                    <h3>Des aiguilles anti-sécheresse</h3>
+                    <p>Fines et recouvertes d'une couche protectrice, les aiguilles perdent très peu d'eau
+                        et supportent le froid. Beaucoup restent vertes toute l'année.</p>
+                </article>
+
+                
+                <article class="fiche">
+                    <h3>Des records vivants</h3>
+                    <p>Certains séquoias dépassent 110 mètres de haut, et des pins bristlecone ont plus
+                        de 4 800 ans : parmi les êtres vivants les plus âgés de la planète.</p>
+                </article>
+            </section>
+
+            <h2 class="titreSection">En images</h2>
+            <section class="grille grille-2">
                 <figure>
                     <img src="../Comifères/WhatsApp Image 2026-11-21 at 20.46.50 (2).jpeg" alt="Conifère 1">
                 </figure>
@@ -35,6 +59,23 @@
                 </figure>
             </section>
         </main>
+
+        <nav class="navPages">
+            <a class="btn" href="Fougères.html">&larr; Précédent</a>
+            <a class="btn" href="Menu.html">Menu</a>
+            <a class="btn" href="Graminees.html">Suivant &rarr;</a>
+        </nav>
+
+        <footer class="pied">
+            <strong>PlantEvo Viewer</strong>
+            <p>Étape 4 sur 6 : les conifères, la révolution de la graine.</p>
+            <div class="liens">
+                <a href="index.html">Accueil</a>
+                <a href="Menu.html">Menu</a>
+                <a href="#haut">&uarr; Haut de page</a>
+            </div>
+            <p>&copy; 2026 PlantEvo Viewer</p>
+        </footer>
     </div>
 </body>
 

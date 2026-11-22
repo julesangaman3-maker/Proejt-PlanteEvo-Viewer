@@ -1,141 +1,447 @@
+/* ====== BASE ====== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --vert: greenyellow;
+    --vert-clair: #c8ff4d;
+    --panneau: rgba(255, 255, 255, 0.75);
+}
+
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
     color: #fff;
-
-    background-image: url("istockphoto-1369025972-612x612.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
 }
 
-header {
+/* ====== PAGE D'ACCUEIL ====== */
+.page-accueil {
+    --fond: url("../Menu/Champ de verdure sous ciel bleu.png");  /* à remplacer par votre image d'accueil */
+}
+
+/* barre du haut : logo, navigation, liste déroulante */
+.barre {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    background: rgba(175, 122, 122, 0.393);
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 12px 20px;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 12px;
 }
 
-.entete {
+.logo img {
+    display: block;
+    border-radius: 12px;
+}
+
+.navAccueil {
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 22px;
 }
 
-.entete a {
+.navAccueil a {
     color: #fff;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
 }
 
-.entete a:hover {
-    color: #a8e063;
-    text-decoration: underline;
+.navAccueil a:hover,
+.navAccueil a:focus-visible {
+    color: var(--vert);
 }
 
-.titre {
-    padding: 30px 40px 0;
+.choix select {
+    padding: 9px 14px;
+    font-size: 1rem;
+    color: #1f2d1f;
+    background-color: var(--vert);
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
 }
 
-.titre h1 {
-    font-size: 70px;
-    color: #0a5712;
+/* texte réservé aux lecteurs d'écran */
+.cache {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
 }
 
-.corps {
-    max-width: 850px;
-    padding: 30px 40px;
-}
-
-.message {
-    margin-bottom: 35px;
-}
-
-.message h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-}
-
-.message h3 {
-    font-weight: normal;
-    line-height: 1.6;
-}
-
-.ensemble {
-    display: flex;
-    gap: 25px;
-}
-
-.recherche,
-.Evolution,
-.plantes {
-    flex: 1;
-    background: rgba(139, 156, 147, 0.441);
-    padding: 20px;
-    border-radius: 12px;
+/* bloc de présentation */
+.hero {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 35px 25px;
     text-align: center;
-}
-
-.ensemble img {
-    margin-bottom: 10px;
-}
-
-.pieds {
-    padding: 0 40px 40px;
-}
-
-footer {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    max-width: 850px;
-}
-
-.explorer {
-    background: rgba(157, 142, 142, 0.5);
-    padding: 20px 30px;
+    color: black;
+    background-color: var(--panneau);
     border-radius: 12px;
-    text-align: center;
 }
 
-.explorer img {
-    margin-bottom: 8px;
+.hero h1 {
+    margin-top: 0;
+    font-size: clamp(2rem, 6vw, 3rem);
 }
 
-.Gratuit h3 {
+.hero h2 {
+    margin-top: 10px;
     font-size: 1.4rem;
 }
 
-a img {
-    border: none;
-    border-radius: 10px;
-    padding: 5px;
-    transition: transform 0.3s, background-color 0.3s;
+.hero p {
+    margin: 18px auto 24px;
+    max-width: 700px;
+    line-height: 1.6;
+    font-style: italic;
 }
 
-a img:hover {
+.grosBtn {
+    font-size: 1.2rem;
+    padding: 14px 30px;
+}
+
+/* les trois cartes */
+.ensemble .fiche {
+    text-align: center;
+}
+
+.ensemble .fiche img {
+    display: block;
+    margin: 0 auto 12px;
+    transition: transform 0.3s;
+}
+
+.ensemble .fiche a:hover img,
+.ensemble .fiche a:focus-visible img {
     transform: scale(1.1);
-    background-color: #0a5712;
 }
 
-@media (max-width: 700px) {
+/* appel à l'action */
+.cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 12px;
+}
 
-    header,
-    .ensemble,
-    footer {
-        flex-direction: column;
-        gap: 15px;
+.cta img {
+    display: block;
+    transition: transform 0.3s;
+}
+
+.cta a:hover img,
+.cta a:focus-visible img {
+    transform: scale(1.1);
+}
+
+/* ====== FOND DE CHAQUE PAGE ====== */
+.page-menu          { --fond: url("../Menu/Champ de verdure sous ciel bleu.png"); }
+.page-algues        { --fond: url("../Algues/images.jpg"); --panneau: rgba(133, 145, 80, 0.75); }
+.page-mousses       { --fond: url("../Mousses/mousse.webp"); }
+.page-fougeres      { --fond: url("../Fougères/HOR_102960_1_BK_1764847795872.webp"); }
+.page-coniferes     { --fond: url("../Comifères/360_F_1211954620_qjWA9NLkro4hZySHsD8hTEeWOyo9CvYb.jpg"); }
+.page-graminees     { --fond: url("../Graminees/les-graminees-1.jpg"); }
+.page-dicotyledones { --fond: url("../Dicotyledones/fond.jpg"); }  /* à remplacer par votre image */
+
+/* ====== FOND FLOU ====== */
+.fond {
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.fond::before {
+    content: "";
+    position: fixed;
+    inset: -10px;
+    z-index: -1;
+    background-color: #2f4f2f;          /* couleur de secours */
+    background-image: var(--fond);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+}
+
+/* ====== EN-TÊTE ====== */
+header {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+header h1 {
+    margin-top: 20px;
+}
+
+header h2 {
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+header hr {
+    margin-top: 20px;
+}
+
+/* menu : en-tête sans cadre, texte lisible grâce à l'ombre */
+.page-menu header {
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* pages de plantes : en-tête dans un cadre clair */
+.page-plante header {
+    padding: 25px;
+    background-color: var(--panneau);
+    border-radius: 12px;
+}
+
+.page-plante header h1,
+.sousTitre {
+    color: black;
+}
+
+.sousTitre {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* ====== CHIFFRE CLÉ ====== */
+.chiffre {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 6px 18px;
+    background-color: var(--vert);
+    color: #1f2d1f;
+    font-weight: bold;
+    border-radius: 999px;
+}
+
+/* ====== BOUTONS ====== */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: var(--vert);
+    color: #1f2d1f;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 999px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background-color: var(--vert-clair);
+    transform: translateY(-2px);
+}
+
+/* bouton grisé (pas de page avant la première, ni après la dernière) */
+.btn.desactive {
+    opacity: 0.4;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+/* bouton en haut de page, aligné à gauche */
+.retour {
+    display: block;
+    width: fit-content;
+    margin-right: auto;
+}
+
+/* ====== BARRE PRÉCÉDENT / MENU / SUIVANT ====== */
+.navPages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+/* ====== TEXTE D'INTRODUCTION ====== */
+.intro {
+    max-width: 900px;
+    margin: 0 auto 35px;
+    padding: 20px 25px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    text-align: center;
+    color: black;
+    background-color: var(--panneau);
+    border-radius: 12px;
+}
+
+/* ====== TITRES DE SECTION ====== */
+.titreSection {
+    max-width: 1100px;
+    margin: 0 auto 18px;
+    text-align: center;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* ====== FICHES "LE SAVIEZ-VOUS ?" ====== */
+.faits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto 45px;
+}
+
+.fiche {
+    padding: 20px;
+    color: black;
+    background-color: var(--panneau);
+    border-top: 5px solid var(--vert);
+    border-radius: 12px;
+}
+
+.fiche h3 {
+    margin-bottom: 8px;
+    font-size: 1.15rem;
+}
+
+.fiche p {
+    line-height: 1.55;
+}
+
+/* ====== LA GRILLE D'IMAGES ====== */
+.grille {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.grille-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grille-auto {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.grille figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.grille a {
+    display: block;
+    text-decoration: none;
+}
+
+.grille img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s;
+}
+
+.grille-auto img {
+    aspect-ratio: 1 / 1;
+}
+
+.grille figure:hover img,
+.grille a:focus-visible img {
+    transform: scale(1.05);
+}
+
+/* légende posée sur l'image (menu) */
+.grille figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px 14px 12px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+}
+
+.grille figcaption span {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+/* ====== PIED DE PAGE ====== */
+.pied {
+    max-width: 1100px;
+    margin: 50px auto 0;
+    padding: 25px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+}
+
+.pied strong {
+    font-size: 1.2rem;
+}
+
+.pied p {
+    margin-top: 8px;
+    font-size: 0.95rem;
+}
+
+.pied .liens {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 14px;
+}
+
+.pied a {
+    color: var(--vert);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.pied a:hover,
+.pied a:focus-visible {
+    text-decoration: underline;
+}
+
+/* ====== TABLETTE ET MOBILE ====== */
+@media (max-width: 800px) {
+    .faits {
+        grid-template-columns: 1fr;
     }
 
-    .entete {
-        flex-wrap: wrap;
-        justify-content: center;
+    .grille:not(.grille-auto) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grille:not(.grille-auto) {
+        grid-template-columns: 1fr;
     }
 }

@@ -5,27 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les Fougères</title>
-    <link rel="stylesheet" href="Fougères.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div class="fondFougeres">
+<body class="page-plante page-fougeres">
+    <div class="fond" id="haut">
         <header>
-            <a class="retourMenu" href="Menu.html">&larr; Retour au Menu</a>
+            <a class="btn retour" href="Menu.html">&larr; Retour au Menu</a>
 
             <h1>LES FOUGÈRES</h1>
-            <p class="sousTitre">Bienvenue sur ma page consacrée aux fougères.</p>
+            <p class="sousTitre">Les plantes qui ont appris à se dresser vers le ciel.</p>
+            <span class="chiffre">Environ 360 millions d'années</span>
         </header>
 
         <main>
             <p class="intro">
-                L'évolution des mousses (bryophytes) et des fougères (ptéridophytes) s'étend sur environ
-                170 millions d'années lors de l'ère Paléozoïque, entre -470 millions d'années et
-                -300 millions d'années. Ce passage progressif du milieu aquatique vers la terre ferme
-                a transformé la planète en créant les premiers sols et les premières forêts.
+                Entre les mousses, collées au sol, et les arbres, il fallait une invention : des vaisseaux
+                pour transporter l'eau. Les fougères l'ont adoptée, et ont pu grandir. À l'ère
+                Paléozoïque, elles ont contribué à couvrir la planète des premières grandes forêts.
             </p>
 
-            <section class="imagesFougeres">
+            <h2 class="titreSection">Le saviez-vous ?</h2>
+            <section class="faits">
+                <article class="fiche">
+                    <h3>Des vaisseaux pour monter</h3>
+                    <p>Leur système de vaisseaux conduit l'eau et la sève dans toute la plante. Grâce
+                        à lui, elles peuvent atteindre plusieurs mètres de haut.</p>
+                </article>
+
+                <article class="fiche">
+                    <h3>Ni fleurs, ni graines</h3>
+                    <p>Les fougères se reproduisent par des spores : de minuscules grains cachés sous les
+                        feuilles, souvent visibles comme des petits points bruns.</p>
+                </article>
+
+                <article class="fiche">
+                    <h3>Les forêts du charbon</h3>
+                    <p>Au Carbonifère, de grandes forêts de fougères et de plantes proches ont été
+                        enfouies. Elles ont fini par former une partie du charbon que nous utilisons.</p>
+                </article>
+            </section>
+
+            <h2 class="titreSection">En images</h2>
+            <section class="grille">
                 <figure>
                     <img src="../Fougères/WhatsApp Image 2026-11-21 at 20.46.49.jpeg" alt="Fougère 1">
                 </figure>
@@ -39,6 +61,23 @@
                 </figure>
             </section>
         </main>
+
+        <nav class="navPages">
+            <a class="btn" href="Mousses.html">&larr; Précédent</a>
+            <a class="btn" href="Menu.html">Menu</a>
+            <a class="btn" href="Comifère.html">Suivant &rarr;</a>
+        </nav>
+
+        <footer class="pied">
+            <strong>PlantEvo Viewer</strong>
+            <p>Étape 3 sur 6 : les fougères, les premières grandes forêts.</p>
+            <div class="liens">
+                <a href="index.html">Accueil</a>
+                <a href="Menu.html">Menu</a>
+                <a href="#haut">&uarr; Haut de page</a>
+            </div>
+            <p>&copy; 2026 PlantEvo Viewer</p>
+        </footer>
     </div>
 </body>
 

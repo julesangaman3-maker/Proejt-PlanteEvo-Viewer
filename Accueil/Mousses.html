@@ -5,42 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les Mousses</title>
-    <link rel="stylesheet" href="Mousses.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div class="fondMousses">
+<body class="page-plante page-mousses">
+    <div class="fond" id="haut">
         <header>
-            <a class="retourMenu" href="Menu.html">&larr; Retour au Menu</a>
 
-            <h1>Les Mousses</h1>
-            <p class="intro">
-                Le passage des algues aux mousses s'est produit lors de la sortie des eaux des végétaux,
-                un processus évolutif progressif qui a pris entre 50 et 100 millions d'années.
-                Cette transition majeure a débuté il y a environ 470 à 500 millions d'années, durant la
-                période de l'Ordovicien, à partir d'ancêtres d'algues vertes d'eau douce proches des
-                Charophytes.
-            </p>
-            <hr>
+            <a class="btn retour" href="Menu.html">&larr; Retour au Menu</a>
+
+            <h1>LES MOUSSES</h1>
+            <p class="sousTitre">Les premières plantes à avoir quitté l'eau.</p>
+            <span class="chiffre">Environ 470 millions d'années</span>
         </header>
+        <main>
+            <p class="intro">
+                Un jour, il y a près de 500 millions d'années, des algues vertes d'eau douce ont osé sortir
+                de l'eau. Ce long voyage, qui a duré des dizaines de millions d'années, a donné naissance
+                aux mousses : de petites plantes douces qui ont commencé à transformer la roche nue en sol.
+            </p>
+            <h2 class="titreSection">Le saviez-vous ?</h2>
+            <section class="faits">
+                <article class="fiche">
+                    <h3>Pionnières de la terre ferme</h3>
+                    <p>Accrochées au sol par de fins filaments, les rhizoïdes, les mousses ont contribué
+                        à former les premiers sols.</p>
+                </article>
 
-        <main class="imagesMousses">
-            <figure>
-                <img src="../Mousses/WhatsApp Image 2026-11-21 at 21.31.12 (4).jpeg" alt="Mousse 1">
-            </figure>
+                <article class="fiche">
+                    <h3>Toujours près de l'eau</h3>
+                    <p>Leurs cellules reproductrices doivent nager dans une fine pellicule d'eau. C'est
+                        pourquoi les mousses sont petites et vivent dans les lieux humides.</p>
+                </article>
+                <article class="fiche">
+                    <h3>Championnes de la survie</h3>
+                    <p>Beaucoup de mousses peuvent se dessécher complètement, puis reverdir dès la
+                        première pluie. Les sphaignes forment les tourbières, de grands réservoirs de carbone.</p>
+                </article>
+            </section>
 
-            <figure>
-                <img src="../Mousses/WhatsApp Image 2026-11-21 at 20.46.48.jpeg" alt="Mousse 2">
-            </figure>
+            <h2 class="titreSection">En images</h2>
+            <section class="grille grille-2">
+                <figure>
+                    <img src="../Mousses/WhatsApp Image 2026-11-21 at 21.31.12 (4).jpeg" alt="Mousse 1">
+                </figure>
 
-            <figure>
-                <img src="../Mousses/WhatsApp Image 2026-11-21 at 20.46.47 (3).jpeg" alt="Mousse 3">
-            </figure>
+                <figure>
+                    <img src="../Mousses/WhatsApp Image 2026-11-21 at 20.46.48.jpeg" alt="Mousse 2">
+                </figure>
 
-            <figure>
-                <img src="../Mousses/WhatsApp Image 2026-11-21 at 21.31.15.jpeg" alt="Mousse 4">
-            </figure>
+                <figure>
+                    <img src="../Mousses/WhatsApp Image 2026-11-21 at 20.46.47 (3).jpeg" alt="Mousse 3">
+                </figure>
+
+                <figure>
+                    <img src="../Mousses/WhatsApp Image 2026-11-21 at 21.31.15.jpeg" alt="Mousse 4">
+                </figure>
+            </section>
         </main>
+
+        <nav class="navPages">
+            <a class="btn" href="Algues.html">&larr; Précédent</a>
+            <a class="btn" href="Menu.html">Menu</a>
+            <a class="btn" href="Fougères.html">Suivant &rarr;</a>
+        </nav>
+
+        <footer class="pied">
+            <strong>PlantEvo Viewer</strong>
+            <p>Étape 2 sur 6 : les mousses, à la conquête de la terre ferme.</p>
+            <div class="liens">
+                <a href="index.html">Accueil</a>
+                <a href="Menu.html">Menu</a>
+                <a href="#haut">&uarr; Haut de page</a>
+            </div>
+            <p>&copy; 2026 PlantEvo Viewer</p>
+        </footer>
     </div>
 </body>
 
