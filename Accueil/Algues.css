@@ -10,6 +10,7 @@ body {
     color: #fff;
 }
 
+/* ====== FOND FLOU ====== */
 .fond {
     position: relative;
     isolation: isolate;
@@ -22,79 +23,102 @@ body {
     position: fixed;
     inset: -10px;
     z-index: -1;
-
     background-image: url("../Algues/images.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
     filter: blur(10px);
 }
 
-h1,
-p,
-.entete1 {
+/* ====== EN-TÊTE ====== */
+header {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    padding: 25px;
+    text-align: center;
+    background-color: rgba(133, 145, 80, 0.55);
+    border-radius: 12px;
+}
+
+header h1 {
+    margin-top: 20px;
     color: black;
 }
 
-
-
-header {
-    transform: translateY(-15%);
-    background-color: rgba(133, 145, 80, 0.55)
+.sousTitre {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: black;
 }
 
-button {
-    display: flex;
-    flex-direction: row;
-}
-
-button a {
+/* ====== BOUTON RETOUR ====== */
+.retourMenu {
+    display: block;
+    width: fit-content;
+    margin-right: auto;
+    padding: 10px 22px;
     background-color: greenyellow;
-    height: auto;
-    width: auto;
-    font-size: 20px;
+    color: #1f2d1f;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border-radius: auto;
-
-
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 999px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s, background-color 0.2s;
 }
 
-h3 {
-    font-size: 30px;
-    transform: translateY(20px);
-
-
+.retourMenu:hover,
+.retourMenu:focus-visible {
+    background-color: #c8ff4d;
+    transform: translateX(-4px);
 }
 
-.p2 {
+/* ====== TEXTE D'INTRODUCTION ====== */
+.intro {
+    max-width: 800px;
+    margin: 0 auto 35px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: center;
     color: #fff;
-
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
 
+/* ====== LA GRILLE ====== */
 .imagesAlgues {
     display: grid;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .imagesAlgues figure {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin: 0;
-    transform: translateY(90px);
-
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .imagesAlgues img {
-    width: 500px;
-    border-radius: 8px;
-    height: 400px;
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
-    border-radius: 10px;
+    object-position: center;
+    transition: transform 0.3s;
+}
 
+.imagesAlgues figure:hover img {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 600px) {
+    .imagesAlgues {
+        grid-template-columns: 1fr;
+    }
+
+    .intro {
+        font-size: 1.2rem;
+    }
 }

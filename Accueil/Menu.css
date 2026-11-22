@@ -23,13 +23,14 @@ body {
     position: fixed;
     inset: -10px;
     z-index: -1;
+    filter: blur(10px);
 
     background-image: url("../Menu/Champ\ de\ verdure\ sous\ ciel\ bleu.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
-    filter: blur(10px);
+    
 }
 
 
