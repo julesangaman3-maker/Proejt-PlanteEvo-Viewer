@@ -8,20 +8,114 @@ body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
     color: #fff;
+}
 
-    background-image: url("");
+/* ====== FOND FLOU ====== */
+.fondConiferes {
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.fondConiferes::before {
+    content: "";
+    position: fixed;
+    inset: -10px;
+    z-index: -1;
+    background-image: url("../Comifères/360_F_1211954620_qjWA9NLkro4hZySHsD8hTEeWOyo9CvYb.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    filter: blur(10px);
 }
 
-h1{
+/* ====== EN-TÊTE ====== */
+header {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    padding: 25px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+}
+
+header h1 {
+    margin-top: 20px;
     color: black;
 }
-p{
+
+.sousTitre {
+    margin-top: 10px;
+    font-size: 1.2rem;
     color: black;
 }
-.entete1{
+
+/* ====== BOUTON RETOUR ====== */
+.retourMenu {
+    display: block;
+    width: fit-content;
+    margin-right: auto;
+    padding: 10px 22px;
+    background-color: greenyellow;
+    color: #1f2d1f;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 999px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.retourMenu:hover,
+.retourMenu:focus-visible {
+    background-color: #c8ff4d;
+    transform: translateX(-4px);
+}
+
+/* ====== TEXTE D'INTRODUCTION ====== */
+.intro {
+    max-width: 900px;
+    margin: 0 auto 35px;
+    padding: 20px 25px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    text-align: center;
     color: black;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+}
+
+/* ====== LA GRILLE ====== */
+.imagesConiferes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.imagesConiferes figure {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.imagesConiferes img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s;
+}
+
+.imagesConiferes figure:hover img {
+    transform: scale(1.05);
+}
+
+/* mobile : 1 colonne */
+@media (max-width: 600px) {
+    .imagesConiferes {
+        grid-template-columns: 1fr;
+    }
 }
