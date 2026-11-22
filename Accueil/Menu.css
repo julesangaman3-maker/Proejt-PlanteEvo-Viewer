@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    color: #fff;
+}
+
+
+.fondMenu {
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.fondMenu::before {
+    content: "";
+    position: fixed;
+    inset: -10px;
+    z-index: -1;
+
+    background-image: url("../Menu/Champ\ de\ verdure\ sous\ ciel\ bleu.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    filter: blur(10px);
+}
+
+
+header {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    text-align: center;
+    text-shadow: 0 2px 6px rgba(141, 112, 112, 0.6);
+}
+
+header h2 {
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+header hr {
+    margin-top: 20px;
+}
+
+/* ====== LA GRILLE ====== */
+.imagesMenu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.imagesMenu a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.imagesMenu img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.imagesMenu a:hover img,
+.imagesMenu a:focus-visible img {
+    transform: scale(1.05);
+}
+
+.imagesMenu figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px 14px 12px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+}
+
+
+@media (max-width: 800px) {
+    .imagesMenu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 480px) {
+    .imagesMenu {
+        grid-template-columns: 1fr;
+    }
+}

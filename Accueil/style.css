@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    color: #fff;
+
+    background-image: url("istockphoto-1369025972-612x612.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(175, 122, 122, 0.393);
+}
+
+.entete {
+    display: flex;
+    gap: 30px;
+}
+
+.entete a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.entete a:hover {
+    color: #a8e063;
+    text-decoration: underline;
+}
+
+.titre {
+    padding: 30px 40px 0;
+}
+
+.titre h1 {
+    font-size: 70px;
+    color: #0a5712;
+}
+
+.corps {
+    max-width: 850px;
+    padding: 30px 40px;
+}
+
+.message {
+    margin-bottom: 35px;
+}
+
+.message h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.message h3 {
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+.ensemble {
+    display: flex;
+    gap: 25px;
+}
+
+.recherche,
+.Evolution,
+.plantes {
+    flex: 1;
+    background: rgba(139, 156, 147, 0.441);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.ensemble img {
+    margin-bottom: 10px;
+}
+
+.pieds {
+    padding: 0 40px 40px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 850px;
+}
+
+.explorer {
+    background: rgba(157, 142, 142, 0.5);
+    padding: 20px 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.explorer img {
+    margin-bottom: 8px;
+}
+
+.Gratuit h3 {
+    font-size: 1.4rem;
+}
+
+a img {
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+a img:hover {
+    transform: scale(1.1);
+    background-color: #0a5712;
+}
+
+@media (max-width: 700px) {
+
+    header,
+    .ensemble,
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .entete {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.fond {
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.fond::before {
+    content: "";
+    position: fixed;
+    inset: -10px;
+    z-index: -1;
+
+    background-image: url("../Algues/images.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    filter: blur(10px);
+}
+
+h1,
+p,
+.entete1 {
+    color: black;
+}
+
+
+
+header {
+    transform: translateY(-15%);
+    background-color: rgba(133, 145, 80, 0.55)
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+}
+
+button a {
+    background-color: greenyellow;
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: auto;
+
+
+}
+
+h3 {
+    font-size: 30px;
+    transform: translateY(20px);
+
+
+}
+
+.p2 {
+    color: #fff;
+
+}
+
+.imagesAlgues {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.imagesAlgues figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 0;
+    transform: translateY(90px);
+
+}
+
+.imagesAlgues img {
+    width: 500px;
+    border-radius: 8px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
