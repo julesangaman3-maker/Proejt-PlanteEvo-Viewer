@@ -335,11 +335,11 @@ header hr {
 }
 
 .grille-2 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .grille-auto {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: (3, 1fr)
 }
 
 .grille figure {
