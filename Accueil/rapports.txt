@@ -1,0 +1,269 @@
+PLANTEVO VIEWER
+Évolution de l'appareil végétatif et de la reproduction des végétaux
+Digital Farming School · Brief 1
+
+Projet : Brief 1 : PlantEvo Viewer (HTML et CSS statiques)
+Période : du 16 au 20 novembre (travail individuel)
+Auteur : N'DIAMOI ANGAMAN JULES CHRIST
+Dépôt GitHub : https://github.com/julesangaman3-maker/Proejt-PlanteEvo-Viewer.git
+Zone d'étude : Côte d'Ivoire, 15 points GPS dans un rectangle d'environ 2 km sur 0,8 km
+
+Ce document réunit trois livrables : Partie 1 (rapport d'agronomie), Partie 2 (rapport SIG & TD),
+Partie 3 (documentation technique du site).
+
+
+
+PARTIE 1 · RAPPORT D'AGRONOMIE
+
+
+1.1 Fil rouge : sortir de l'eau
+
+Les premières plantes vivaient dans l'eau, qui les soutenait, les hydratait et transportait leurs
+gamètes. Pour coloniser la terre ferme, les végétaux ont dû résoudre quatre problèmes, chacun réglé
+par une innovation apportée par un groupe précis.
+
+Problème hors de l'eau | Innovation | Groupe qui l'apporte
+- Se dessécher | Cuticule cireuse, stomates | Mousses (bryophytes)
+- Tenir debout, transporter l'eau | Vaisseaux (xylème, phloème), lignine, vraies racines et feuilles | Fougères (premières plantes vasculaires)
+- Se reproduire sans eau libre | Pollen, ovule protégé, graine nue | Conifères, cycas (gymnospermes)
+- Protéger et disperser la graine, mieux polliniser | Fleur, fruit, double fécondation, alliance avec les insectes | Plantes à fleurs (angiospermes) : graminées, dicotylédones
+
+1.2 Frise de l'évolution
+
+Algues (> 1 milliard d'années) : thalle, vie aquatique
+Mousses (≈ 470 Ma, Ordovicien) : cuticule, stomates, rhizoïdes
+Fougères (≈ 430 Ma, Silurien) : vaisseaux, lignine, racines
+Conifères (graines ≈ 370 Ma, Dévonien) : pollen, graine nue
+Graminées (plantes à fleurs ≈ 130 Ma) : fleur, fruit, pollinisation par le vent
+Dicotylédones (plantes à fleurs ≈ 130 Ma) : fleur, fruit, pollinisation par les insectes
+
+Plantes de moins en moins dépendantes de l'eau. Ma = millions d'années. Ordres de grandeur à
+vérifier et à sourcer.
+
+1.3 Les six groupes
+
+
+ALGUES
+- Problème résolu : aucun, les algues restent dans l'eau, qui les soutient et les hydrate. Elles
+  servent de point de départ à la comparaison.
+- Appareil végétatif : corps en thalle (cellule unique, filament ou lame), sans vraies racines,
+  tiges ni feuilles. Les grandes algues se fixent par un crampon. Pas de vaisseaux.
+- Reproduction : asexuée (division, fragmentation, spores mobiles) et sexuée (fusion de gamètes).
+  Le cycle varie : haplontique chez Spirogyra, haplodiplontique chez Ulva, où deux générations
+  alternent. Les gamètes et spores sont souvent mobiles dans l'eau.
+- Exemples : Spirogyra (mares), Ulva (côte). Seul un groupe d'algues vertes (les charophytes) est
+  ancêtre des plantes terrestres : « algues » n'est pas un seul groupe.
+
+MOUSSES (bryophytes)
+- Problème résolu : le dessèchement, grâce à la cuticule cireuse et aux stomates.
+- Appareil végétatif : petite plante verte avec des rhizoïdes (pas de vraies racines), une tige et
+  des feuilles minces. Pas de vrais vaisseaux, donc taille réduite et vie en milieu humide.
+- Reproduction : la plante verte est le gamétophyte (génération dominante). Le sporophyte (soie et
+  capsule) en dépend. Le gamète mâle nage jusqu'à l'ovule, ce qui impose un film d'eau.
+  Dissémination par spores.
+- Exemples : mousses des murs et des troncs.
+
+FOUGÈRES
+- Problème résolu : tenir debout et transporter l'eau, grâce au xylème, au phloème et à la lignine.
+- Appareil végétatif : vraies racines, tige (souvent un rhizome) et frondes. Premières plantes
+  vasculaires : elles peuvent atteindre de plus grandes tailles.
+- Reproduction : la fougère feuillée est le sporophyte (dominant). Les spores naissent dans des
+  sporanges regroupés en sores sous les frondes. Elles donnent un petit prothalle (gamétophyte) dont
+  le gamète mâle nage encore : la fougère reste liée à l'humidité. Pas de graines, pas de fleurs.
+- Exemples : Nephrolepis, fougères épiphytes sur les palmiers.
+
+CONIFÈRES (gymnospermes)
+- Problème résolu : se reproduire sans eau libre, grâce au pollen, à l'ovule protégé et à la
+  graine nue.
+- Appareil végétatif : arbres et arbustes ligneux, à croissance secondaire (bois), souvent à
+  aiguilles ou écailles et à résine.
+- Reproduction : sporophyte dominant ; gamétophyte réduit à quelques cellules. Cônes mâles (pollen)
+  et cônes femelles (ovules sur des écailles). Le pollen est transporté par le vent et le gamète
+  mâle arrive par un tube pollinique. La graine est nue, sans fruit : une pomme de pin n'est pas
+  un fruit.
+- Exemples : cycas, Araucaria, thuya.
+
+GRAMINÉES (Poacées)
+- Problème résolu : protéger et disperser la graine : fleur, fruit, double fécondation
+  (angiospermes). Elles se pollinisent par le vent.
+- Appareil végétatif : feuilles longues à nervures parallèles, racines fasciculées, tige creuse à
+  nœuds (chaume), repousse à la base des feuilles. Plantes herbacées (monocotylédones).
+- Reproduction : fleurs très réduites, sans pétales voyants, groupées en épillets ; pollinisation
+  par le vent. Le fruit est un caryopse (le grain). Double fécondation : un gamète forme l'embryon,
+  l'autre l'albumen.
+- Exemples : riz, maïs, gazon, Panicum. Toutes les fleurs ne sont pas pollinisées par des insectes.
+
+DICOTYLÉDONES
+- Problème résolu : mieux polliniser : fleur colorée, nectar et alliance avec les insectes, plus
+  fruit.
+- Appareil végétatif : graine à deux cotylédons, feuilles à nervures ramifiées, racine pivotante,
+  croissance en épaisseur (bois) chez les arbres et arbustes.
+- Reproduction : fleurs avec pétales, souvent odorantes et nectarifères ; pollinisation fréquente
+  par les insectes. Double fécondation, ovule enfermé dans l'ovaire qui devient le fruit.
+- Exemples : cacaoyer, manioc, papayer. On dit aujourd'hui eudicotylédones : « dicotylédones »
+  désigne un groupe ancien, non monophylétique.
+
+1.4 Comparaison de la reproduction
+
+Message clé : chez les algues, les mousses et les fougères, le gamète mâle nage jusqu'à l'ovule ;
+ces plantes restent liées à l'humidité. Le pollen transporte le gamète mâle par l'air (vent ou
+insectes) : la reproduction devient aérienne.
+
+Groupe | Ce qu'on voit (génération dominante) | Dissémination
+- Mousses | Gamétophyte (la plante verte) | Spores
+- Fougères | Sporophyte (la fougère feuillée) | Spores (sores sous les frondes)
+- Gymnospermes | Sporophyte ; gamétophyte réduit à quelques cellules | Graine nue (sur une écaille)
+- Angiospermes | Sporophyte ; gamétophyte microscopique | Graine enfermée dans un fruit
+
+1.5 Focus pollinisateurs : un exemple ivoirien
+
+Le cacaoyer est pollinisé par de minuscules moucherons (Forcipomyia) qui se reproduisent dans les
+débris humides au sol. Sans pollinisateurs, pas de cabosses : c'est le lien direct entre évolution
+des fleurs et production agricole. À l'inverse, le riz et le maïs, des graminées, sont pollinisés
+par le vent et ne dépendent pas d'insectes.
+
+1.6 Erreurs fréquentes à éviter
+
+- « Les mousses ont des racines. » -> Ce sont des rhizoïdes ; elles n'ont pas de vrais vaisseaux.
+- « Les fougères font des graines ou des fleurs. » -> Elles se reproduisent par spores.
+- « La pomme de pin est un fruit. » -> Gymnosperme signifie graine nue, sans fruit.
+- « Toutes les fleurs sont pollinisées par des insectes. » -> Les graminées le sont par le vent.
+- « Les algues sont un seul groupe. » -> Seules certaines algues vertes sont les ancêtres des
+  plantes terrestres.
+- « Dicotylédones est un terme ancien. » -> On dit aujourd'hui eudicotylédones. Le terme garde un
+  intérêt pédagogique mais regroupe des lignées non apparentées.
+
+1.7 Rapport de travaux pratiques : espèces observées
+
+Quinze observations ont été géoréférencées sur le terrain. Le tableau reprend le fichier de collecte
+tel qu'il a été saisi, avec une remarque d'identification quand elle est nécessaire. Neuf lignes
+n'ont pas de nom d'espèce : elles sont à compléter avant le rendu.
+
+ID | Groupe saisi | Espèce ou nom renseigné | Remarque d'identification
+1  | Conifère      | -                | Espèce à préciser.
+2  | Fougère       | -                | Espèce à préciser.
+3  | Fougère       | -                | Espèce à préciser.
+4  | Conifère      | -                | Espèce à préciser.
+5  | Graminée      | -                | Espèce à préciser.
+6  | Fougère       | Ptéridophytes    | « Ptéridophytes » désigne le groupe des fougères et alliées, pas une espèce. Donner le nom d'espèce.
+7  | Mousse        | -                | Espèce à préciser.
+8  | Algue         | -                | Espèce à préciser (genre si possible).
+9  | Graminées     | Poacé            | « Poacé » est la famille (Poacées). Préciser l'espèce.
+10 | Mousse        | -                | Espèce à préciser.
+11 | Dicotylétones | Polyalthia       | Genre Polyalthia, famille des Annonacées. Cette famille appartient aux magnoliidées : ce n'est pas une eudicotylédone au sens strict.
+12 | Graminées     | Gazon            | Nom courant (pelouse). Préciser l'espèce de Poacée.
+13 | Graminées     | Troène de Chine  | À VÉRIFIER. Le troène de Chine (Ligustrum sinense) est un arbuste de la famille des Oléacées, donc une eudicotylédone, pas une graminée.
+14 | Dicotylétones | -                | Espèce à préciser.
+15 | Dicotylétones | Mélina ou gambar | Gmelina arborea (Lamiacées), arbre de plantation : eudicotylédone.
+
+Lecture : les six groupes sont représentés (graminées 4, fougères 3, dicotylédones 3, conifères 2,
+mousses 2, algues 1). L'algue est représentée par un seul point, ce qui est insuffisant pour
+comparer des milieux. Si le troène de Chine est reclassé, on obtient 3 graminées et 4 dicotylédones.
+
+1.8 Conclusion et sources
+
+Du thalle des algues à la fleur des dicotylédones, chaque groupe résout un problème de la vie hors
+de l'eau : dessèchement (mousses), soutien et transport (fougères), reproduction sans eau libre
+(conifères), protection et dispersion de la graine avec la pollinisation aérienne (plantes à
+fleurs). Cette logique relie la biologie des plantes à l'agriculture : cacaoyer et insectes, riz et
+maïs et vent.
+
+Sources à citer (à compléter par l'auteur) : manuel de botanique ou de biologie végétale utilisé en
+cours, Tela Botanica pour les espèces, une ressource universitaire ou muséale pour les datations
+géologiques, Wikimedia Commons pour les images (auteur et licence).
+
+
+
+PARTIE 2 · RAPPORT SIG & TD
+
+
+2.1 Objectif
+
+Localiser par GPS les espèces végétales observées pour le site PlantEvo Viewer, produire une couche
+de points exploitable dans un SIG (QGIS, ArcGIS) et décrire leur répartition. Une seule collecte
+alimente trois livrables : la page du site, le rapport de TP et ce rapport.
+
+2.2 Données et traitement
+
+- Source : fichier de collecte Book_Feuil1__1.csv (séparateur « ; », 15 lignes, colonnes groupe,
+  espèce, latitude, longitude).
+- Système de coordonnées : WGS 84, degrés décimaux (EPSG:4326). Les longitudes ouest sont négatives.
+- Couche produite : shapefile de 15 points (plantes.shp, avec .shx, .dbf, .prj et .cpg en UTF-8).
+  Champs : ID, GROUPE, ESPECE, LATITUDE, LONGITUDE.
+- Distances : calculées avec la formule de Haversine (rayon terrestre moyen 6 371 km), suffisante à
+  cette échelle. Pour des analyses en mètres dans un SIG, reprojeter en UTM 30 Nord (EPSG:32630).
+
+2.3 Nettoyage des coordonnées
+
+Le fichier d'origine contenait sept lignes aux coordonnées mal saisies (virgule décimale manquante,
+signe absent, latitude et longitude inversées). Elles ont été corrigées en les ramenant dans la zone
+des autres points, tous situés vers 6,88° N et 5,23° O. La colonne « Lagitude » a été lue comme la
+latitude. Ces corrections sont à confirmer avec les relevés GPS d'origine.
+
+ID | Valeurs saisies (latitude ; longitude) | Problème | Valeurs retenues
+1  | -52262936 ; 6.8962261  | Colonnes inversées, virgule manquante | 6.8962261 ; -5.2262936
+2  | 6.89558763 ; -52267452 | Virgule manquante                     | 6.8955876 ; -5.2267452
+7  | 6.8784779 ; -52331062  | Virgule manquante                     | 6.8784779 ; -5.2331062
+9  | 6.8790159 ; -52335402  | Virgule manquante                     | 6.8790159 ; -5.2335402
+11 | 6.8835652 ; 5.231185   | Signe moins manquant                  | 6.8835652 ; -5.2311850
+12 | 6.8835875 ; -52313124  | Virgule manquante                     | 6.8835875 ; -5.2313124
+13 | 6.8838176 ; -52311937  | Virgule manquante                     | 6.8838176 ; -5.2311937
+
+Les huit autres lignes étaient correctes ; seuls des espaces parasites ont été retirés.
+
+2.4 Positions des espèces
+
+ID | Groupe        | Espèce           | Latitude N (°) | Longitude (°) | Zone
+1  | Conifères     | -                | 6.8962261      | -5.2262936    | A
+2  | Fougères      | -                | 6.8955876      | -5.2267452    | A
+3  | Fougères      | -                | 6.8955345      | -5.2267407    | A
+4  | Conifères     | -                | 6.8815819      | -5.2307893    | B
+5  | Graminées     | -                | 6.8793336      | -5.2303427    | B
+6  | Fougères      | Ptéridophytes    | 6.8783181      | -5.2331159    | B
+7  | Mousses       | -                | 6.8784779      | -5.2331062    | B
+8  | Algues        | -                | 6.8793605      | -5.2337095    | B
+9  | Graminées     | Poacé            | 6.8790159      | -5.2335402    | B
+10 | Mousses       | -                | 6.8835350      | -5.2312899    | C
+11 | Dicotylédones | Polyalthia       | 6.8835652      | -5.2311850    | C
+12 | Graminées     | Gazon            | 6.8835875      | -5.2313124    | C
+13 | Graminées     | Troène de Chine  | 6.8838176      | -5.2311937    | C
+14 | Dicotylédones | -                | 6.8836311      | -5.2314980    | C
+15 | Dicotylédones | Mélina ou gambar | 6.8836271      | -5.2314822    | C
+
+Coordonnées arrondies à 7 décimales (environ 1 cm), bien en dessous de la précision d'un GPS de
+terrain. Les zones A, B, C sont définies par regroupement visuel des points.
+
+2.5 Cartes de répartition
+
+Figure 1 : répartition des 15 points par groupe, WGS 84 (voir le PDF).
+Figure 2 : zoom sur les zones B et C, échelle 100 m (voir le PDF).
+
+2.6 Indicateurs de répartition
+
+- Nombre de points : 15 (6 groupes représentés)
+- Emprise (latitude) : de 6,8783181° à 6,8962261° N, soit environ 1,99 km du nord au sud
+- Emprise (longitude) : de -5,2337095° à -5,2262936°, soit environ 0,82 km d'est en ouest
+- Centre moyen des points : 6,884347° N ; -5,230823°
+- Distance moyenne au plus proche voisin : environ 50 m
+- Plus petit écart entre deux points : 1,8 m (ID 14 et 15)
+
+Zone | Points | Étendue | Groupes présents
+- A (nord)   | ID 1 à 3   | environ 90 m  | Fougères (2), conifères (1)
+- B (sud)    | ID 4 à 9   | environ 445 m | Graminées (2), conifères, mousses, algues, fougères (1 chacun)
+- C (centre) | ID 10 à 15 | moins de 40 m | Dicotylédones (3), graminées (2), mousses (1)
+
+Distances entre centres de zones : A-B environ 1,94 km ; A-C environ 1,45 km ; B-C environ 0,49 km.
+
+2.7 Analyse
+
+- Trois secteurs distincts : un petit secteur au nord (A), un secteur sud étalé (B) et un secteur
+  central très concentré (C).
+- Diversité par secteur : la zone B réunit cinq des six groupes en moins de 450 m, dont l'algue, ce
+  qui en fait le secteur le plus varié. La zone C est dominée par les plantes à fleurs
+  (dicotylédones et graminées).
+- Absences : aucune dicotylédone dans les zones A et B, aucun conifère en C. Avec un seul point par
+  groupe pour certains, ces absences ne permettent pas de conclusion.
+- Points très proches : les paires ID 2-3 (6 m), ID 10-12 (6 m) et ID 14-15 (2 m) sont à
+  l'intérieur de l'erreur typique d'un GPS de téléphone (quelques mètres). Elles correspondent sans
+  doute à la même station ou à des individus voisins.
+- Lien avec la biologie : algues, mousses et fougères (liées).
