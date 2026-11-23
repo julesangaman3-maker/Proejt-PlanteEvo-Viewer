@@ -1,4 +1,25 @@
-/* ====== BASE ====== */
+/* ----------------------------------------------------------
+   SOMMAIRE
+   - Variables et base
+   - Fond de chaque page
+   - En-tête
+   - Boutons et navigation entre pages
+   - Page d'accueil
+   - Cartographie
+   - Blocs de contenu communs (intro, titres, fiches, grilles)
+   - Pied de page
+   - Pages de plantes
+       Algues
+       Mousses
+       Fougères, Conifères, Graminées, Dicotylédones
+       Navigation placée après les photos
+   - Responsive
+   ---------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------
+   VARIABLES ET BASE
+   ---------------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -17,10 +38,161 @@ body {
     color: #fff;
 }
 
-/* ====== PAGE D'ACCUEIL ====== */
-.page-accueil {
-    --fond: url("../Menu/Champ de verdure sous ciel bleu.png");  /* à remplacer par votre image d'accueil */
+/* texte réservé aux lecteurs d'écran */
+.cache {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
 }
+
+
+/* ----------------------------------------------------------
+   FOND DE CHAQUE PAGE
+   ---------------------------------------------------------- */
+
+/* image de fond propre à chaque page */
+.page-accueil    { --fond: url("../Menu/Champ de verdure sous ciel bleu.png"); }
+.page-menu       { --fond: url("../Menu/Champ de verdure sous ciel bleu.png"); }
+.page-algues     { --fond: url("../Algues/images.jpg"); --panneau: rgba(133, 145, 80, 0.75); }
+.page-mousses    { --fond: url("../Mousses/mousse.webp"); }
+.page-fougeres   { --fond: url("../Fougères/HOR_102960_1_BK_1764847795872.webp"); }
+.page-coniferes  { --fond: url("../Comifères/360_F_1211954620_qjWA9NLkro4hZySHsD8hTEeWOyo9CvYb.jpg"); }
+.page-graminees  { --fond: url("../Graminees/les-graminees-1.jpg"); }
+.page-dicotyledones { --fond: url("../Dicotyledones/fond.jpg"); } /* à remplacer par votre image */
+
+/* fond flouté */
+.fond {
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.fond::before {
+    content: "";
+    position: fixed;
+    inset: -10px;
+    z-index: -1;
+    background-color: #2f4f2f; /* couleur de secours */
+    background-image: var(--fond);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+}
+
+
+/* ----------------------------------------------------------
+   EN-TÊTE
+   ---------------------------------------------------------- */
+header {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+header h1 {
+    margin-top: 20px;
+}
+
+header h2 {
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+header hr {
+    margin-top: 20px;
+}
+
+/* menu : en-tête sans cadre, texte lisible grâce à l'ombre */
+.page-menu header {
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* pages de plantes : en-tête dans un cadre clair */
+.page-plante header {
+    padding: 25px;
+    background-color: var(--panneau);
+    border-radius: 12px;
+}
+
+.page-plante header h1,
+.sousTitre {
+    color: black;
+}
+
+.sousTitre {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* chiffre clé */
+.chiffre {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 6px 18px;
+    background-color: var(--vert);
+    color: #1f2d1f;
+    font-weight: bold;
+    border-radius: 999px;
+}
+
+
+/* ----------------------------------------------------------
+   BOUTONS ET NAVIGATION ENTRE PAGES
+   ---------------------------------------------------------- */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: var(--vert);
+    color: #1f2d1f;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 999px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background-color: var(--vert-clair);
+    transform: translateY(-2px);
+}
+
+/* bouton grisé (pas de page avant la première, ni après la dernière) */
+.btn.desactive {
+    opacity: 0.4;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+/* bouton en haut de page, aligné à gauche */
+.retour {
+    display: block;
+    width: fit-content;
+    margin-right: auto;
+}
+
+/* barre Précédent / Menu / Suivant */
+.navPages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+
+/* ----------------------------------------------------------
+   PAGE D'ACCUEIL
+   ---------------------------------------------------------- */
 
 /* barre du haut : logo, navigation, liste déroulante */
 .barre {
@@ -64,15 +236,6 @@ body {
     border: none;
     border-radius: 999px;
     cursor: pointer;
-}
-
-/* texte réservé aux lecteurs d'écran */
-.cache {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
 }
 
 /* bloc de présentation */
@@ -125,7 +288,7 @@ body {
 }
 
 /* appel à l'action */
-.cta {
+.boutton {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,146 +302,66 @@ body {
     border-radius: 12px;
 }
 
-.cta img {
+.boutton img {
     display: block;
     transition: transform 0.3s;
 }
 
-.cta a:hover img,
-.cta a:focus-visible img {
+.boutton a:hover img,
+.boutton a:focus-visible img {
     transform: scale(1.1);
 }
 
-/* ====== FOND DE CHAQUE PAGE ====== */
-.page-menu          { --fond: url("../Menu/Champ de verdure sous ciel bleu.png"); }
-.page-algues        { --fond: url("../Algues/images.jpg"); --panneau: rgba(133, 145, 80, 0.75); }
-.page-mousses       { --fond: url("../Mousses/mousse.webp"); }
-.page-fougeres      { --fond: url("../Fougères/HOR_102960_1_BK_1764847795872.webp"); }
-.page-coniferes     { --fond: url("../Comifères/360_F_1211954620_qjWA9NLkro4hZySHsD8hTEeWOyo9CvYb.jpg"); }
-.page-graminees     { --fond: url("../Graminees/les-graminees-1.jpg"); }
-.page-dicotyledones { --fond: url("../Dicotyledones/fond.jpg"); }  /* à remplacer par votre image */
 
-/* ====== FOND FLOU ====== */
-.fond {
-    position: relative;
-    isolation: isolate;
-    min-height: 100vh;
-    padding: 30px;
+/* ----------------------------------------------------------
+   CARTOGRAPHIE
+   ---------------------------------------------------------- */
+.map-section {
+    padding: 100px 8%;
+    background: #f8f7f1;
 }
 
-.fond::before {
-    content: "";
-    position: fixed;
-    inset: -10px;
-    z-index: -1;
-    background-color: #2f4f2f;          /* couleur de secours */
-    background-image: var(--fond);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(10px);
-}
-
-/* ====== EN-TÊTE ====== */
-header {
-    max-width: 1100px;
-    margin: 0 auto 30px;
+.map-heading {
     text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
 }
 
-header h1 {
-    margin-top: 20px;
+.map-heading h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 42px;
+    color: #214c38;
+    margin-bottom: 18px;
 }
 
-header h2 {
-    margin-top: 10px;
-    font-weight: 400;
+.map-heading p {
+    font-size: 14px;
+    color: #778078;
+    line-height: 1.8;
 }
 
-header hr {
-    margin-top: 20px;
-}
-
-/* menu : en-tête sans cadre, texte lisible grâce à l'ombre */
-.page-menu header {
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-}
-
-/* pages de plantes : en-tête dans un cadre clair */
-.page-plante header {
-    padding: 25px;
-    background-color: var(--panneau);
+.map-container {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
     border-radius: 12px;
+    border: 1px solid #dde5da;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-.page-plante header h1,
-.sousTitre {
-    color: black;
-}
-
-.sousTitre {
-    margin-top: 10px;
-    font-size: 1.2rem;
-}
-
-/* ====== CHIFFRE CLÉ ====== */
-.chiffre {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 6px 18px;
-    background-color: var(--vert);
-    color: #1f2d1f;
-    font-weight: bold;
-    border-radius: 999px;
-}
-
-/* ====== BOUTONS ====== */
-.btn {
-    display: inline-block;
-    padding: 10px 22px;
-    background-color: var(--vert);
-    color: #1f2d1f;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-decoration: none;
-    text-shadow: none;
-    border-radius: 999px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
-    transition: transform 0.2s, background-color 0.2s;
-}
-
-.btn:hover,
-.btn:focus-visible {
-    background-color: var(--vert-clair);
-    transform: translateY(-2px);
-}
-
-/* bouton grisé (pas de page avant la première, ni après la dernière) */
-.btn.desactive {
-    opacity: 0.4;
-    box-shadow: none;
-    pointer-events: none;
-}
-
-/* bouton en haut de page, aligné à gauche */
-.retour {
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
     display: block;
-    width: fit-content;
-    margin-right: auto;
 }
 
-/* ====== BARRE PRÉCÉDENT / MENU / SUIVANT ====== */
-.navPages {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    max-width: 1100px;
-    margin: 40px auto 0;
-}
 
-/* ====== TEXTE D'INTRODUCTION ====== */
+/* ----------------------------------------------------------
+   BLOCS DE CONTENU COMMUNS
+   ---------------------------------------------------------- */
+
+/* texte d'introduction */
 .intro {
     max-width: 900px;
     margin: 0 auto 35px;
@@ -291,7 +374,7 @@ header hr {
     border-radius: 12px;
 }
 
-/* ====== TITRES DE SECTION ====== */
+/* titres de section */
 .titreSection {
     max-width: 1100px;
     margin: 0 auto 18px;
@@ -299,7 +382,7 @@ header hr {
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
 
-/* ====== FICHES "LE SAVIEZ-VOUS ?" ====== */
+/* fiches « Le saviez-vous ? » */
 .faits {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -325,7 +408,7 @@ header hr {
     line-height: 1.55;
 }
 
-/* ====== LA GRILLE D'IMAGES ====== */
+/* grille d'images */
 .grille {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -335,11 +418,7 @@ header hr {
 }
 
 .grille-2 {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.grille-auto {
-    grid-template-columns: (3, 1fr)
+    padding-bottom: 60px;
 }
 
 .grille figure {
@@ -391,7 +470,10 @@ header hr {
     font-weight: normal;
 }
 
-/* ====== PIED DE PAGE ====== */
+
+/* ----------------------------------------------------------
+   PIED DE PAGE
+   ---------------------------------------------------------- */
 .pied {
     max-width: 1100px;
     margin: 50px auto 0;
@@ -429,19 +511,245 @@ header hr {
     text-decoration: underline;
 }
 
-/* ====== TABLETTE ET MOBILE ====== */
-@media (max-width: 800px) {
-    .faits {
-        grid-template-columns: 1fr;
+
+/* ----------------------------------------------------------
+   PAGES DE PLANTES
+   ---------------------------------------------------------- */
+
+/* ---------- Algues : appareil végétatif et cycle ---------- */
+
+/* cycle de reproduction */
+.appareilCycleAlgue {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.appareilCycleAlgue img {
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.texteCycleAlgue {
+    flex: 1;
+}
+
+.texteCycleAlgue h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.texteCycleAlgue p {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #f1f2ef;
+}
+
+/* appareil végétatif */
+.AppareilVegetatifAlgue {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.AppareilVegetatifAlgue img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.AppareilVegetatifAlgue h3 {
+    font-size: 25px;
+    font-family: "Segoe UI", sans-serif;
+    text-align: center;
+}
+
+
+/* ---------- Mousses : appareil végétatif et cycle ---------- */
+.imagesMousses {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.imagesMousses figure {
+    flex: 1;
+    text-align: center;
+}
+
+.imagesMousses figcaption {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.imagesMousses img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+    margin: auto;
+    object-fit: contain;
+}
+
+.cadreImage {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.descriptionMousse {
+    margin-top: 20px;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #fdf9f9;
+}
+
+
+/* ---------- Fougères, Conifères, Graminées, Dicotylédones (même mise en page) ---------- */
+
+/* conteneur */
+.AppareilVegetatifFougere,
+.AppareilVegetatifConifere,
+.AppareilVegetatifGraminees,
+.AppareilVegetatifDicotyledones {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 40px auto;
+}
+
+/* colonne image */
+.imageFougere,
+.imageConifere,
+.imageGraminees,
+.imageDicotyledones {
+    width: 45%;
+    text-align: center;
+}
+
+.imageFougere img,
+.imageConifere img,
+.imageGraminees img,
+.imageDicotyledones img {
+    width: 100%;
+    height: 350px;
+    padding: 10px;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.imageFougere h3,
+.imageConifere h3,
+.imageGraminees h3,
+.imageDicotyledones h3 {
+    margin: 15px 0;
+    font-size: 20px;
+    color: white;
+}
+
+/* colonne texte */
+.descriptionFougere,
+.descriptionConifere,
+.descriptionGraminees,
+.descriptionDicotyledones {
+    padding: 15px;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+
+/* ---------- Navigation placée après les photos ---------- */
+.page-plante .fond {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-plante .fond > *:not(.retour) {
+    width: 100%;
+}
+
+.page-plante .navPages {
+    order: 1;
+}
+
+.page-plante .pied {
+    order: 2;
+}
+
+
+/* ----------------------------------------------------------
+   RESPONSIVE
+   ---------------------------------------------------------- */
+
+/* tablette */
+@media screen and (max-width: 900px) {
+    .faits,
+    .grille,
+    .grille-auto {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .grille:not(.grille-auto) {
-        grid-template-columns: repeat(2, 1fr);
+    .appareilCycleAlgue,
+    .AppareilVegetatifAlgue,
+    .imagesMousses {
+        flex-direction: column;
+    }
+
+    .appareilCycleAlgue img {
+        width: 100%;
     }
 }
 
-@media (max-width: 480px) {
-    .grille:not(.grille-auto) {
+/* téléphone */
+@media screen and (max-width: 768px) {
+    .imageFougere,
+    .imageConifere,
+    .imageGraminees,
+    .imageDicotyledones {
+        width: 90%;
+    }
+
+    .map-section {
+        padding: 60px 5%;
+    }
+
+    .map-container {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .faits,
+    .grille,
+    .grille-auto {
         grid-template-columns: 1fr;
     }
 }
